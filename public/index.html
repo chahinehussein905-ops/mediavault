@@ -1,13 +1,38 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediaVault</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909"><title>MediaVault — Your private media space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>MediaVault</h1>
-  <p>Your website is online!</p>
-</body>
-</html>
+<div class="ambient"></div>
+<header class="top"><a class="brand" href="#"><span class="mark">M</span><span>MEDIA<span class="muted">VAULT</span></span></a><div class="topright"><span id="userLabel" class="muted"></span><button id="logout" class="quiet hidden">Sign out</button></div></header>
+<main>
+<section id="authView" class="auth-wrap">
+  <div class="eyebrow"><i></i> YOUR PERSONAL MEDIA SPACE</div>
+  <h1>Keep what<br><em>matters.</em></h1>
+  <p class="intro">A considered home for your images and videos. Private by design, beautifully organised.</p>
+  <div class="panel auth-panel">
+    <div class="tabs"><button class="tab active" data-tab="signin">Sign in</button><button class="tab" data-tab="signup">Create account</button></div>
+    <div id="authError" class="notice hidden"></div>
+    <label>Email address<input id="email" type="email" placeholder="you@example.com" autocomplete="email"></label>
+    <label>Password<input id="password" type="password" placeholder="At least 8 characters" autocomplete="current-password"></label>
+    <button id="emailAction" class="primary">Sign in <span>↗</span></button>
+    <div class="or"><span>OR CONTINUE WITH</span></div>
+    <div class="socials"><button id="google" class="social"><b>G</b> Google</button><button id="apple" class="social"><b>●</b> Apple</button></div>
+    <p class="fine">By continuing, you agree to use MediaVault responsibly. Your library is private to your account.</p>
+  </div>
+  <div class="secure"><span>◈</span> PRIVATE STORAGE <span>·</span> SECURE SIGN-IN <span>·</span> YOUR FILES, YOURS</div>
+</section>
+<section id="appView" class="dashboard hidden">
+  <div class="dashhead"><div><div class="eyebrow"><i></i> YOUR LIBRARY</div><h1>Your media,<br><em>in its place.</em></h1><p class="intro">A quiet space for everything worth keeping.</p></div>
+  <label class="upload primary upload-btn">＋ Add media<input id="fileInput" type="file" accept="image/*,video/*" multiple hidden></label></div>
+  <div id="status" class="status">Your private library</div>
+  <div id="grid" class="grid"><div class="empty"><div class="empty-icon">＋</div><h3>Your library starts here</h3><p>Upload an image or video to see it appear here.</p></div></div>
+</section>
+</main>
+<footer>MEDIA<span>VAULT</span><small>MADE FOR THE MOMENTS YOU KEEP.</small></footer>
+<script src="/config.js"></script><script type="module" src="/app.js"></script>
+</body></html>
